@@ -1,31 +1,19 @@
 # La labellisation des differentes startups de type licornes
 
-L'objectif du projet est de categoriser toutes les start-up ayant une valorisation qui atteint ou depasse les un millard de dollars a fin de leur attribuer des balises, entre 1 et 0, 
+L'objectif du projet est de catégoriser toutes les start-up ayant une valorisation qui atteint ou dépasse les un milliard de dollars afin de leur attribuer des balises, entre 1 et 0.
 
-1: Pour les start-up dont leur valorisation evolueront tres vite.
+1: Pour les start-up dont leur valorisation évoluent très vite;
 
-0: Pour les start-up dont leur valorisation evolueront lentement.
+0: Pour les start-up dont leur valorisation évoluent lentement.
 
-Pour la realisation de ce projet se sont les donnees du dataset "Unicorn Startup" qui seront utiliser avec 936 lignes et 11 colonnes.
+Pour la réalisation de ce projet se sont les données du dataset "Unicorn Startup" qui seront utilisées avec 936 lignes et 11 colonnes.
 
-"Image"
+![alt text]()
 
-Apres avoir chargement du dataset, je passe a l'analyse pour comprendre les donnees du dataset
+Apres l'analyse des donnes du dataset, je passe a l'etape suivante le preprocessing: j'encode les donnees avec la OdinalEncoder de sklearn, j'utilise la fonction make_pipeline de sklearn afin d'éviter les fuites de données, j'entre en paramètre les fonctions: MinMaxScaler afin de standardiser les données entre le MAximum et le Minimum et je met également en paramètre la fonction KMeans de sklearn qui qui a fin d'utiliser des cluster pour catégoriser les différentes données.
 
- "Image"
+En suite je convertis la sortie du modele qui en tableau numpy en dictionnaire avec comme nom de variable: "test" qui a comme KEY:"Avenir" et VALUE:"La prediction du model", ensuite  je convertis le dictionnaire "test" en DataFrame en le nommant “predire” pour ensuite le fusionner au premier DataFrame “data” et le seconde “predire”.
 
-Apres l'analyse je passe l'etape du preprocessing: j'encode les donnees avec la OdinalEncoder de sklearn, 
+Ce qui donne ceci:
 
-"Image"
-
-puis j'utilise la fonction make_pipeline de sklearn a fin d'evite les fuites de donnees, j'entre en parametre les fonctions: MinMaxScaler a fin de standariser les donnees entre le MAximum et le Minimum et je met egalement en parametre la fonction KMeans de sklearn qui qui a fin d'utiliser des cluster pour categoriser les differentes donnees.
-
-"Image"
-
-En suite je cree un dictionnaire "test" qui a comme KEY:"Avenir" et VALUE:"La prediction du model", puis je convertis le dictionnaire "test" pour ensuite le fuisionner au dataset
-
-"Image code"
-
-Ce qui donne ceci: 
-
-"image finale"
+![alt text]()
