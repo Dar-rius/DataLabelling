@@ -10,7 +10,7 @@ Pour la réalisation de ce projet se sont les données du dataset "Unicorn Start
 
 ![alt text](https://github.com/Dar-rius/DataLabelling/blob/main/images/img1.png)
 
-Apres l'analyse des donnes du dataset, je passe a l'etape suivante le preprocessing: j'encode les donnees avec la OdinalEncoder de sklearn, j'utilise la fonction make_pipeline de sklearn afin d'éviter les fuites de données, j'entre en paramètre les fonctions: MinMaxScaler afin de standardiser les données entre le MAximum et le Minimum et je met également en paramètre la fonction KMeans de sklearn qui qui a fin d'utiliser des cluster pour catégoriser les différentes données.
+Apres l'analyse des donnes du dataset, je passe a l'etape suivante le preprocessing: j'encode les donnees avec la fontion OdinalEncoder de sklearn, j'utilise la fonction make_pipeline de sklearn afin d'éviter les fuites de données, j'entre en paramètre les fonctions: MinMaxScaler afin de standardiser les données entre le MAximum et le Minimum et je met également en paramètre la fonction KMeans de sklearn qui qui a fin d'utiliser des cluster pour catégoriser les différentes données.
 
 En suite je convertis la sortie du modele qui en tableau numpy en dictionnaire avec comme nom de variable: "test" qui a comme KEY:"Avenir" et VALUE:"La prediction du model", ensuite  je convertis le dictionnaire "test" en DataFrame en le nommant “predire” pour ensuite le fusionner au premier DataFrame “data” et le seconde “predire”.
 
